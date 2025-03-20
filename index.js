@@ -6,20 +6,20 @@ class hero{
     }
 
     attackKind(){
-        switch(true){
-            case this.type == "mago" :
-            return "magia";
+        switch(this.type){
+            case "mago" :
+                return "magia";
 
-            case this.type == "guerreiro":
-            return "espada";
+            case "guerreiro":
+                return "espada";
 
-            case this.type == "monge":
-            return "artes marciais";
+            case "monge":
+                return "artes marciais";
 
-            case this.type == "ninja":
-            return "shuriken";
+            case "ninja":
+               return "shuriken";
         }
-    }
+    }   
 
     attack(){
         console.log(`O ${this.type} ${this.name} atacou usando ${this.attackKind()}`)
@@ -30,7 +30,6 @@ const havenox = new hero("Havenox", 34, "guerreiro");
 const salluth = new hero("Salluth", 22 , "monge");
 const sonofnight = new hero("Sonofnight", 38 , "mago");
 const estefao = new hero("Teths", 38, "ninja");
-
 
 havenox.attack();
 sonofnight.attack();
